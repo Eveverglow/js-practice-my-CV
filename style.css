@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-family: 'DotGothic16', sans-serif;
+    color: white; 
+}
+.container {
+    margin-top: 80px;
+    left: 50%;
+    width: 70%;
+    height: 80%;
+    border: 10px solid hsl(139deg 59% 55%);
+    padding: 10px;
+    font-family: 'DotGothic16', sans-serif;
+    color: white; 
+}
+span{
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker{
+    50%{
+      opacity: 0;
+    }
+  }
+
