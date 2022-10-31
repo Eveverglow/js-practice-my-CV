@@ -15,7 +15,7 @@ body {
     padding: 15px;
     font-family: 'DotGothic16', sans-serif;
     color: white; 
-
+    cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -95,7 +95,28 @@ grid-template-rows: 1fr
 }
 
 h2:hover{
-    cursor: pointer;
     color: hsl(49deg 100% 63%);
 }
 
+#start-game{
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    border: 4px solid white;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-name: sparcle-button;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+    
+}
+
+@keyframes sparcle-button {
+    from {border: 4px solid white;}
+    to {border: 4px solid hsl(49deg 100% 63%);}
+}
+
+#start-game:active {
+font-size: 12px;
+}
