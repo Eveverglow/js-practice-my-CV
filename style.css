@@ -120,3 +120,22 @@ h2:hover{
 #start-game:active {
 font-size: 12px;
 }
+
+.game-field{
+    display: none;
+    margin-top: 60px;
+    left: 50%;
+    width: 70%;
+    height: 500px;
+    border: 10px solid hsl(139deg 59% 55%);
+    padding: 15px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.game-field.open {
+    display: flex;
+}
+
+.container.close {
+    display: none;
+}

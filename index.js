@@ -10,4 +10,11 @@ typewriter = () => {
 
 window.addEventListener("load", typewriter)
 
+var startGame = document.querySelector("#start-game")
+var runGame = document.querySelector(".game-field")
+var resume = document.querySelector(".container")
 
+startGame.addEventListener('click', function (){
+   runGame.classList.toggle("open");
+   resume.classList.toggle ("close");
+})
