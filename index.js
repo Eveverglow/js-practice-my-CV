@@ -1,6 +1,13 @@
 var cvName = ['VICTORIA DANKO']
 var textPosition = 0; 
 var speed = 100;
+var startGame = document.querySelector("#start-game")
+var runGame = document.querySelector(".game-field")
+var resume = document.querySelector(".container")
+var loading = ['Loading...']
+var textProcessor = 0
+var speedForLoader = 200
+var closeButton = document.querySelector('.exit-btn')
 
 typewriter = () => {
   document.querySelector("#cv-name").innerHTML = cvName[0].substring(0, textPosition) + '<span>\u25AE</span>';
@@ -10,13 +17,6 @@ typewriter = () => {
 }
 
 window.addEventListener("load", typewriter)
-
-var startGame = document.querySelector("#start-game")
-var runGame = document.querySelector(".game-field")
-var resume = document.querySelector(".container")
-var loading = ['Loading...']
-var textProcessor = 0
-var speedForLoader = 200
 
 
 loader = () => {
@@ -31,4 +31,10 @@ startGame.addEventListener('click', function (){
    resume.classList.toggle ("close");
    loader()
    
+})
+
+closeButton.addEventListener('click', function () {
+  !runGame.classList.toggle("open");
+  !resume.classList.toggle ("close");
+  
 })

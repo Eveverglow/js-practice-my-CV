@@ -20,6 +20,13 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
+
+.container.open{
+    
+    display: grid;
+    
+}
+
  span{
     animation: blinker 1s linear infinite;
  }
@@ -132,6 +139,10 @@ font-size: 12px;
     font-family: 'DotGothic16', sans-serif;
 }
 
+.game-field.close{
+ display: none;
+}
+
 .game-field.open {
     display: flex;
     justify-content: center;
@@ -171,7 +182,11 @@ font-size: 12px;
     background-color: white;
     transition: all 0.5s ease-in-out;
   }
-  
+
+  .line:hover{
+    color: hsl(49deg 100% 63%);
+  }
+
   .line-one {
     top: 0;
     transform: rotate(45deg)
