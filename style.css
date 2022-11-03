@@ -20,9 +20,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
- /* span{
+ span{
     animation: blinker 1s linear infinite;
-  } */
+ }
   
   @keyframes blinker{
     50%{
@@ -153,3 +153,32 @@ font-size: 12px;
 .container.close {
     display: none;
 }
+
+.exit-btn{
+ position: absolute;
+ top: 10%;
+ right: 7%;
+ width: 60px;
+ height: 60px;
+ cursor: pointer
+}
+
+.line {  
+    margin: 0;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .line-one {
+    top: 0;
+    transform: rotate(45deg)
+  }
+  
+  .line-two {
+    top: 0;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
