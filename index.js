@@ -8,6 +8,8 @@ var loading = ['Loading...']
 var textProcessor = 0
 var speedForLoader = 200
 var closeButton = document.querySelector('.exit-btn')
+var endLoading = document.querySelector('.loader-field')
+var game = document.querySelector('.game')
 
 
 typewriter = () => {
@@ -19,18 +21,25 @@ typewriter = () => {
 
 window.addEventListener("load", typewriter)
 
-
+function openGame(){
+endLoading.classList.toggle("close")
+game.classList.toggle("open")
+} 
 
 loader = () => {
   document.querySelector(".loader-text").innerHTML = loading[0].substring(0, textProcessor) + '<span>\u25AE</span>';
   
-  if(textProcessor++ != loading[0].length)
+  if(textProcessor++ != loading[0].length) {
     setTimeout(loader, speedForLoader);
+  } else {
+    openGame()
+  }
 }
 
 function closeGame(){
   !runGame.classList.toggle("open");
   !resume.classList.toggle ("close");
+  !game.classList.toggle("close")
   textProcessor = 0;
 }
 

@@ -204,4 +204,14 @@ font-size: 12px;
   .line-two {
     transform: rotate(-45deg);
   }
+ .game {
+  display: inline-block;
+ }
 
+ .game.open {
+  display: block;
+ }
+
+ .game.close {
+  display: none;
+ }
