@@ -26,6 +26,12 @@ loader = () => {
     setTimeout(loader, speedForLoader);
 }
 
+function closeGame(){
+  !runGame.classList.toggle("open");
+  !resume.classList.toggle ("close");
+  textProcessor = 0;
+}
+
 startGame.addEventListener('click', function (){
    runGame.classList.toggle("open");
    resume.classList.toggle ("close");
@@ -34,7 +40,5 @@ startGame.addEventListener('click', function (){
 })
 
 closeButton.addEventListener('click', function () {
-  !runGame.classList.toggle("open");
-  !resume.classList.toggle ("close");
-  
+  closeGame()
 })
