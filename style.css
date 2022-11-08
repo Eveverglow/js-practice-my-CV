@@ -209,3 +209,34 @@ font-size: 12px;
     right: 6%;
   }
   }
+
+  @media (max-width: 991px) and (min-width: 768px) {
+    .container {
+        font-size: 13px;
+      }
+      .exit-btn{
+        right: 4%;
+      }
+  }
+
+  @media (max-width: 767px) and (min-width: 576px) {
+    #experience-list li:last-child{
+        display: none;
+    }
+    .container {
+        font-size: 13px;
+      }
+      .exit-btn{
+        right: 3%;
+      }
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    #git-icon{
+        
+        width: 31px;
+        height: 31px;
+        
+    }
+  }
