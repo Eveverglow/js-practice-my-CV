@@ -9,6 +9,7 @@ var textProcessor = 0
 var speedForLoader = 200
 var closeButton = document.querySelector('.exit-btn')
 
+
 typewriter = () => {
   document.querySelector("#cv-name").innerHTML = cvName[0].substring(0, textPosition) + '<span>\u25AE</span>';
   
@@ -17,6 +18,7 @@ typewriter = () => {
 }
 
 window.addEventListener("load", typewriter)
+
 
 
 loader = () => {
