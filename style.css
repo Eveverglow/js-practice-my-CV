@@ -200,3 +200,12 @@ font-size: 12px;
   .line-two {
     transform: rotate(-45deg);
   }
+
+  @media (max-width: 1199px) and (min-width: 992px){
+  .container {
+    font-size: 14px;
+  }
+ .exit-btn{
+    right: 6%;
+  }
+  }
