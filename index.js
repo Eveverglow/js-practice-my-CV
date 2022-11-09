@@ -23,23 +23,26 @@ window.addEventListener("load", typewriter)
 
 function openGame(){
 endLoading.classList.toggle("close")
-game.classList.toggle("open")
+game.classList.toggle("close")
 } 
 
 loader = () => {
   document.querySelector(".loader-text").innerHTML = loading[0].substring(0, textProcessor) + '<span>\u25AE</span>';
   
-  if(textProcessor++ != loading[0].length) {
+  if(textProcessor++ <= loading[0].length) {
     setTimeout(loader, speedForLoader);
+    console.log('loader')
   } else {
+    console.log('else')
     openGame()
   }
 }
 
-function closeGame(){
-  !runGame.classList.toggle("open");
-  !resume.classList.toggle ("close");
-  !game.classList.toggle("close")
+function closeGame() {
+  endLoading.classList.toggle ("close");
+  runGame.classList.toggle("open");
+  resume.classList.toggle ("close");
+  game.classList.toggle("close")
   textProcessor = 0;
 }
 
