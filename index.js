@@ -18,12 +18,12 @@ typewriter = () => {
   if(textPosition++ != cvName[0].length)
     setTimeout(typewriter, speed);
 }
-
 window.addEventListener("load", typewriter)
 
 function openGame(){
 endLoading.classList.toggle("close")
 game.classList.toggle("close")
+
 } 
 
 loader = () => {
@@ -33,7 +33,6 @@ loader = () => {
     setTimeout(loader, speedForLoader);
     console.log('loader')
   } else {
-    console.log('else')
     openGame()
   }
 }

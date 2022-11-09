@@ -139,10 +139,6 @@ font-size: 12px;
     font-family: 'DotGothic16', sans-serif;
 }
 
-.game-field.close{
- display: none;
-}
-
 .game-field.open {
     display: flex;
     justify-content: center;
@@ -160,15 +156,6 @@ font-size: 12px;
     display: flex;
 
 }
-
-.loader-field.close {
-  display: none;
-}
-
-.container.close {
-    display: none;
-}
-
 .exit-btn{
  position: absolute;
  display: flex;
@@ -204,14 +191,10 @@ font-size: 12px;
   .line-two {
     transform: rotate(-45deg);
   }
- .game {
-  display: inline-block;
- }
+.game {
+  display: flex;
+}
 
- .game.open {
-  display: block;
- }
-
- .game.close {
-  display: none;
+.close{
+  display: none !important;
  }
