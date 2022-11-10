@@ -72,14 +72,13 @@ var checkFail = setInterval (function (){
   var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
 
   var obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left'));
-  
-  if(obstacleLeft < 70 && obstacleLeft > 20 && characterTop >= 30) {
 
-    obstacle.style.animation = 'none';
-    obstacle.style.dispaly = 'none';
+  if(obstacleLeft < 60 && obstacleLeft > 10 && characterTop >= 50) {
+    // obstacle.style.animation = 'none';
     alert('game over')
   }
+  
+  
 
 }, 10)
 
-jump();
