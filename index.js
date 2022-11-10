@@ -55,3 +55,31 @@ startGame.addEventListener('click', function (){
 closeButton.addEventListener('click', function () {
   closeGame()
 })
+
+var character = document.getElementById('character')
+var obstacle = document.getElementById('obstacle')
+
+function jump (){
+  if (character.classList != 'animate') {
+  character.classList.add('animate')
+  }
+  setTimeout(function(){
+    character.classList.remove('animate');
+  }, 500);
+}
+
+var checkFail = setInterval (function (){
+  var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
+
+  var obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left'));
+  
+  if(obstacleLeft < 70 && obstacleLeft > 20 && characterTop >= 30) {
+
+    obstacle.style.animation = 'none';
+    obstacle.style.dispaly = 'none';
+    alert('game over')
+  }
+
+}, 10)
+
+jump();
